@@ -1,3 +1,4 @@
+/*estilo de fuente*/
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
+/*fondo que se ve atras de los contenedores*/
 body{
     background-image: url(../images/bg5.jpg);
     background-size: cover;
@@ -93,7 +95,7 @@ main{
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-.contenedor__login-register form{
+.contenedor__login-register form{   /*contenedor de los formularios*/
     width: 100%;
     padding: 80px 20px;
     background: white;
@@ -133,17 +135,17 @@ main{
 
 
 
-.formulario__login{
+.formulario__login{     /*para que el formulario login aparezca, transicion*/
     opacity: 1;
     display: block;
 }
-.formulario__register{
+.formulario__register{ 
     display: none;
 }
 
 
-
-@media screen and (max-width: 850px){
+/*Responsive Design*/
+@media screen and (max-width: 850px){   /*cuando la pagina tena un ancho de 850px*/
 
     main{
         margin-top: 50px;
