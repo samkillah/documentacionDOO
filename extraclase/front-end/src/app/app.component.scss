@@ -1,0 +1,32 @@
+mat-sidenav-container {
+    height: 100%;
+    mat-sidenav {
+        mat-nav-list {
+            .chevron-button.rotated {
+                transition: 300ms ease-in-out;
+                transform: rotate(0deg);
+                right: 0;
+                float: right;
+                position: absolute;
+            }
+        }
+    }
+}
+::ng-deep{
+    app-home{
+        width: 100%;
+        height: 100%;
+    }
+    app-places{
+        width: 100%;
+        height: 100%;
+    }
+    app-students{
+        width: 100%;
+        height: 100%;
+    }
+    app-teachers{
+        width: 100%;
+        height: 100%;
+    }
+}

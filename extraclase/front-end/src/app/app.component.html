@@ -1,0 +1,40 @@
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <mat-nav-list>
+      <mat-list-item>
+        <span
+          *ngIf="isExpanded"
+          class="subtitle"
+          style="width: 210px; font-size: 32px"
+          ><b>Monitorías</b></span
+        >
+        <mat-icon
+          color="primary"
+          (click)="isExpanded = !isExpanded"
+          mat-list-icon
+          class="chevron-button sidenav-button"
+          [ngClass]="{ rotated: isExpanded }"
+          >menu</mat-icon
+        >
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item *ngFor="let nav of actions" [routerLink]="nav.route">
+        <mat-icon color="primary" mat-list-icon>{{ nav.icon }}</mat-icon>
+        <span *ngIf="isExpanded" class="subtitle" style="width: 210px">{{
+          nav.name
+        }}</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content
+    style="width: 100%; height: 100%"
+    fxLayoutAlign="cenetr center"
+  >
+    <div
+      style="width: 90%; height: 90%; margin-left: 25px"
+      fxLayoutAlign="cenetr center"
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
